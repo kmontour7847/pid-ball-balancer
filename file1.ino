@@ -76,11 +76,11 @@ digitalWrite(TrigPin, LOW);
 pinMode(EchoPin, INPUT);
 duration = pulseIn(EchoPin, HIGH);
 
-  cm = duration/(15*2);
+  cm = duration/(25*2);
   
   
-  if(cm > 30)              // 30 cm is the maximum position for the ball
-  {cm=30;}                //Signal Conditioning for ultrasonic sensor  
+  if(cm > 50)              // 30 cm is the maximum position for the ball
+  {cm=50;}                //Signal Conditioning for ultrasonic sensor  
 
   cmn = a * cm + (1 - a) * cm1;     //Exponential filter- signal conditioning 
   Serial.print(cm); Serial.print("\t");
